@@ -11,7 +11,7 @@ import { PokeAPIService } from 'src/app/Servicios/poke-api.service';
 })
 export class PokedexComponent implements OnInit {
 
-  public pokemon!: { id: Number; types: JSON; name: string; sprites: JSON; weight: Number; };
+  public pokemon!: Pokemon
 
   constructor(private _pokeAPI: PokeAPIService) { }
 

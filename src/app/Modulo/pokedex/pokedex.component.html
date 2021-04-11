@@ -14,7 +14,6 @@
             <!-- cuerpo tarjeta -->
             <div class="card-body">
                 <h5 class="card-title">{{pokemon.name | uppercase}}</h5>
-                <!-- <h5 class="card-title">{{pokemon ? pokemon.name | uppercase : 'No existe'}}</h5> -->
 
                 <!-- Imagen redimencionada al 50% -->
                 <img src="{{pokemon.sprites.front_default}}" class="img-fluid mb-2 w-50 border">
@@ -27,11 +26,11 @@
                     </div>
                     <div class="input-group">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon1">Tipo </button>
-                        <span class="form-control"></span>
+                        <span class="form-control"><span class="badge bg-info text-dark rounded-pill me-1" *ngFor="let types of pokemon.types" >{{types.type.name}}</span></span>
                     </div>
                     <div class="input-group">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon1">Peso </button>
-                        <span class="form-control">{{pokemon.weight}}</span>
+                        <span class="form-control">{{pokemon.weight}} lb</span>
                     </div>
                 </div>
 
